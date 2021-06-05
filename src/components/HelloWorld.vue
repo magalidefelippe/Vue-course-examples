@@ -67,6 +67,9 @@
     <br>
     <img src='https://pbs.twimg.com/media/EWPJiRLU8AIbuyb.jpg' alt='imagen de bob esponja'>
     <img v-bind:src='urlImage' alt='imagen de bob esponja'>
+    <img :src='urlImage' alt='imagen de bob esponja'>
+    <img :src='urlImage' :[key]='text'>
+
   </div>
 </template>
 
@@ -100,7 +103,9 @@ export default {
       job: "Maestro",
     },
 
-    urlImage: 'https://pbs.twimg.com/media/EWPJiRLU8AIbuyb.jpg'
+    urlImage: 'https://pbs.twimg.com/media/EWPJiRLU8AIbuyb.jpg',
+    key: 'alt',
+    text: 'Imagen de bob esponja'
   }),
 
   methods: {

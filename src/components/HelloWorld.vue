@@ -76,6 +76,19 @@
     <img :src="urlImage" alt="imagen de bob esponja" />
     <img :src="urlImage" :[key]="text" />
     <img v-bind="image" alt="imagen de bob esponja" />
+
+    <h1>Directiva v-model</h1>
+    <h4>{{userName}}</h4>
+    <input v-model="userName">
+    <h1>v-model en un textarea y con modificador</h1>
+    <textarea v-model.lazy="userName"/>
+    <h1>v-model en un select</h1>
+    <h4>El item seleccionado es: {{itemSelected}}</h4>
+    <select v-model="itemSelected">
+      <option value="A">Product A</option>
+      <option value="B">Product B</option>
+      <option value="C">Product C</option>
+    </select>
   </div>
 </template>
 
@@ -116,6 +129,9 @@ export default {
       src: "https://pbs.twimg.com/media/EWPJiRLU8AIbuyb.jpg",
       alt: "imagen de bob esponja",
     },
+
+    userName: '',
+    itemSelected: ''
   }),
 
   methods: {

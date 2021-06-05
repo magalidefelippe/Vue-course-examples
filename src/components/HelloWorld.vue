@@ -41,35 +41,34 @@
       {{ value }}
     </h1>
 
-      <!--
+    <!--
         Con v-if
       -->
-      <div v-if="login">
-        <h1 v-for="value in personObject" :key="value">
-          {{ value }}
-        </h1>
-      </div>
+    <div v-if="login">
+      <h1 v-for="value in personObject" :key="value">
+        {{ value }}
+      </h1>
+    </div>
 
     <!--
       V-ON
     -->
-    <button @click="vOnEvent">
-      click
-    </button>
-      <!-- v-on con modificador once -->
-      <button @click.once="vOnEvent">
-      Solo una vez
-      </button>
-    
+    <button @click="vOnEvent">click</button>
+    <!-- v-on con modificador once -->
+    <button @click.once="vOnEvent">Solo una vez</button>
+
     <!--
       V-BIND
     -->
-    <br>
-    <img src='https://pbs.twimg.com/media/EWPJiRLU8AIbuyb.jpg' alt='imagen de bob esponja'>
-    <img v-bind:src='urlImage' alt='imagen de bob esponja'>
-    <img :src='urlImage' alt='imagen de bob esponja'>
-    <img :src='urlImage' :[key]='text'>
-
+    <br />
+    <img
+      src="https://pbs.twimg.com/media/EWPJiRLU8AIbuyb.jpg"
+      alt="imagen de bob esponja"
+    />
+    <img v-bind:src="urlImage" alt="imagen de bob esponja" />
+    <img :src="urlImage" alt="imagen de bob esponja" />
+    <img :src="urlImage" :[key]="text" />
+    <img v-bind="image" alt="imagen de bob esponja" />
   </div>
 </template>
 
@@ -103,16 +102,20 @@ export default {
       job: "Maestro",
     },
 
-    urlImage: 'https://pbs.twimg.com/media/EWPJiRLU8AIbuyb.jpg',
-    key: 'alt',
-    text: 'Imagen de bob esponja'
+    urlImage: "https://pbs.twimg.com/media/EWPJiRLU8AIbuyb.jpg",
+    key: "alt",
+    text: "Imagen de bob esponja",
+    image: {
+      src: "https://pbs.twimg.com/media/EWPJiRLU8AIbuyb.jpg",
+      alt: "imagen de bob esponja",
+    },
   }),
 
   methods: {
-    vOnEvent(){
-      alert('Usando v-on')
-    }
-  }
+    vOnEvent() {
+      alert("Usando v-on");
+    },
+  },
 };
 </script>
 

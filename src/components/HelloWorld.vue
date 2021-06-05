@@ -78,17 +78,23 @@
     <img v-bind="image" alt="imagen de bob esponja" />
 
     <h1>Directiva v-model</h1>
-    <h4>{{userName}}</h4>
-    <input v-model="userName">
+    <h4>{{ userName }}</h4>
+    <input v-model="userName" />
     <h1>v-model en un textarea y con modificador</h1>
-    <textarea v-model.lazy="userName"/>
+    <textarea v-model.lazy="userName" />
     <h1>v-model en un select</h1>
-    <h4>El item seleccionado es: {{itemSelected}}</h4>
+    <h4>El item seleccionado es: {{ itemSelected }}</h4>
     <select v-model="itemSelected">
       <option value="A">Product A</option>
       <option value="B">Product B</option>
       <option value="C">Product C</option>
     </select>
+
+    <h1>Directiva v-pre</h1>
+    <div v-pre>
+      <p v-if="false">Las directivas aca no tienen poder</p>
+      <p>{{ msg }}</p>
+    </div>
   </div>
 </template>
 
@@ -130,8 +136,8 @@ export default {
       alt: "imagen de bob esponja",
     },
 
-    userName: '',
-    itemSelected: ''
+    userName: "",
+    itemSelected: "",
   }),
 
   methods: {

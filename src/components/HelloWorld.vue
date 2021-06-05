@@ -60,7 +60,13 @@
       <button @click.once="vOnEvent">
       Solo una vez
       </button>
-      
+    
+    <!--
+      V-BIND
+    -->
+    <br>
+    <img src='https://pbs.twimg.com/media/EWPJiRLU8AIbuyb.jpg' alt='imagen de bob esponja'>
+    <img :src='urlImage' alt='imagen de bob esponja'>
   </div>
 </template>
 
@@ -93,6 +99,8 @@ export default {
       age: 30,
       job: "Maestro",
     },
+
+    urlImage: 'https://pbs.twimg.com/media/EWPJiRLU8AIbuyb.jpg'
   }),
 
   methods: {

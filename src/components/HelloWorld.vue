@@ -3,63 +3,70 @@
     <!-- 
       v-text 
     -->
-    <h1>{{ msg }}</h1>
-    <h1 v-text="msg"></h1>
+    <h1>Directiva v-text</h1>
+    <h3>{{ msg }}</h3>
+    <h3 v-text="msg"></h3>
 
     <!-- 
       v-html
     -->
+    <h1>Directiva v-html</h1>
     <p v-html="vhtmlExample"></p>
 
     <!-- 
       v-show
     -->
-    <h1 v-show="firstPermission">Este elemento se mostrará si tengo permiso</h1>
-    <h1 v-show="secondPermission">
+    <h1>Directiva v-show</h1>
+    <h3 v-show="firstPermission">Este elemento se mostrará si tengo permiso</h3>
+    <h3 v-show="secondPermission">
       Este elemento se mostrará si tengo permiso
-    </h1>
+    </h3>
 
     <!-- 
       v-if, v-else, v-else-if
     -->
-    <h1 v-if="login & admin">
+    <h1>Directivas v-if, v-else y v-else-if</h1>
+    <h3 v-if="login & admin">
       Esto se mostrará si el usuario se loguea y es administrador
-    </h1>
-    <h1 v-else-if="login">
+    </h3>
+    <h3 v-else-if="login">
       Esto se mostrará si el usuario se loguea pero no es administrador
-    </h1>
-    <h1 v-else>Esto se mostrará si no se identifica</h1>
+    </h3>
+    <h3 v-else>Esto se mostrará si no se identifica</h3>
 
     <!--
     v-for
     -->
-    <h1 v-for="item in items" :key="item.id">
+    <h1>Directiva v-for</h1>
+    <h3 v-for="item in items" :key="item.id">
       {{ item.message }}
-    </h1>
+    </h3>
 
-    <h1 v-for="value in personObject" :key="value">
+    <h3 v-for="value in personObject" :key="value">
       {{ value }}
-    </h1>
+    </h3>
 
     <!--
         Con v-if
       -->
     <div v-if="login">
-      <h1 v-for="value in personObject" :key="value">
+      <h3 v-for="value in personObject" :key="value">
         {{ value }}
-      </h1>
+      </h3>
     </div>
 
     <!--
       V-ON
     -->
+    <h1>Directiva v-on</h1>
     <button @click="vOnEvent">click</button>
-    <!-- v-on con modificador once -->
+    <h1>v-on con modificador</h1>
     <button @click.once="vOnEvent">Solo una vez</button>
 
     <!--
       V-BIND
     -->
+    <h1>Directiva v-bind</h1>
     <br />
     <img
       src="https://pbs.twimg.com/media/EWPJiRLU8AIbuyb.jpg"
@@ -77,7 +84,7 @@ export default {
   name: "HelloWorld",
   data: () => ({
     msg: "Bienvenido al curso de Vuejs",
-    vhtmlExample: "<h1>Este elemento será un h1</h1>",
+    vhtmlExample: "<h3>Este elemento será un h3</h3>",
     firstPermission: false,
     secondPermission: true,
     login: true,

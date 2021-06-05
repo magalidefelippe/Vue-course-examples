@@ -66,7 +66,7 @@
     -->
     <br>
     <img src='https://pbs.twimg.com/media/EWPJiRLU8AIbuyb.jpg' alt='imagen de bob esponja'>
-    <img :src='urlImage' alt='imagen de bob esponja'>
+    <img v-bind:src='urlImage' alt='imagen de bob esponja'>
   </div>
 </template>
 

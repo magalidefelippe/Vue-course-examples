@@ -50,7 +50,12 @@
         </h1>
       </div>
 
-      
+    <!--
+      V-ON
+    -->
+    <button @click="vOnEvent">
+      click
+    </button>
   </div>
 </template>
 
@@ -84,6 +89,12 @@ export default {
       job: "Maestro",
     },
   }),
+
+  methods: {
+    vOnEvent(){
+      alert('Usando v-on')
+    }
+  }
 };
 </script>
 

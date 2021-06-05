@@ -56,6 +56,11 @@
     <button @click="vOnEvent">
       click
     </button>
+      <!-- v-on con modificador once -->
+      <button @click.once="vOnEvent">
+      Solo una vez
+      </button>
+      
   </div>
 </template>
 

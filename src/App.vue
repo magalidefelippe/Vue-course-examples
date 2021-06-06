@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <Directives v-show='false' msg="Bienvenidos al curso de Vuejs"/>
-    <computed-properties/>
-    <watchers/>
-    <component-example/>
-    <component-example/>
-    <component-example/>
+    <Directives v-show='false'/>
+    <computed-properties v-show='false'/>
+    <watchers v-show='false'/>
+    <component-example v-show='false'/>
+    <props-example :noteTitle="noteOneTitle" :noteImage="noteOneImage" :noteBody="noteOneBody"/>
+    <props-example :noteTitle="noteTwoTitle" :noteImage="noteTwoImage" :noteBody="noteTwoBody"/>
   </div>
 </template>
 
@@ -14,13 +14,26 @@ import Directives from './components/directives.vue'
 import ComputedProperties from './components/computedProperties.vue'
 import Watchers from './components/watchers.vue'
 import ComponentExample from './components/componentExample.vue'
+import PropsExample from './components/propsExample.vue'
+
 export default {
   name: 'App',
+  data: () => ({
+    noteOneTitle: 'Bomberos salvan un gatito',
+    noteOneImage: 'http://static2.businessinsider.com/image/505b14b56bb3f7f10d000016-609-900/cat-fireman.jpg',
+    noteOneBody: 'Un bombero salvo un gatito de un incendio en bla bla bla bla',
+    noteTwoTitle: 'Argentina produce Sputnik V',
+    noteTwoImage: 'https://www.eleconomista.com.mx/__export/1618942852522/sites/eleconomista/img/2021/04/20/vacuna_sputnik_v_reuters_rusia.jpg_1269359182.jpg',
+    noteTwoBody: 'El primer lote podría entregarse a fines de junio',
+    
+  }),
   components: {
     Directives,
     ComputedProperties,
     Watchers,
-    ComponentExample
+    ComponentExample,
+    PropsExample
+
   }
 }
 </script>

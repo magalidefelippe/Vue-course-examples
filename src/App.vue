@@ -3,6 +3,9 @@
     <Directives v-show='false' msg="Bienvenidos al curso de Vuejs"/>
     <computed-properties/>
     <watchers/>
+    <component-example/>
+    <component-example/>
+    <component-example/>
   </div>
 </template>
 
@@ -10,13 +13,14 @@
 import Directives from './components/directives.vue'
 import ComputedProperties from './components/computedProperties.vue'
 import Watchers from './components/watchers.vue'
-
+import ComponentExample from './components/componentExample.vue'
 export default {
   name: 'App',
   components: {
     Directives,
     ComputedProperties,
-    Watchers
+    Watchers,
+    ComponentExample
   }
 }
 </script>

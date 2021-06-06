@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Bienvenidos al curso de Vuejs"/>
+    <Directives v-show='false' msg="Bienvenidos al curso de Vuejs"/>
+    <computed-properties/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Directives from './components/directives.vue'
+import ComputedProperties from './components/computedProperties.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Directives,
+    ComputedProperties
   }
 }
 </script>

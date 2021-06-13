@@ -8,6 +8,11 @@
 
 <script>
 export default {
-    props: ['noteImage', 'noteTitle', 'noteBody']
+  //props: ['noteImage', 'noteTitle', 'noteBody']
+  props: {
+    noteImage: String,
+    noteTitle: String,
+    noteBody: String
+  }
 };
 </script>

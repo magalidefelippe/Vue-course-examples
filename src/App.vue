@@ -4,8 +4,9 @@
     <computed-properties v-show='false'/>
     <watchers v-show='false'/>
     <component-example v-show='false'/>
-    <props-example :noteTitle="noteOneTitle" :noteImage="noteOneImage" :noteBody="noteOneBody"/>
-    <props-example :noteTitle="noteTwoTitle" :noteImage="noteTwoImage" :noteBody="noteTwoBody"/>
+    <props-example v-show="false" :noteTitle="noteOneTitle" :noteImage="noteOneImage" :noteBody="noteOneBody"/>
+    <props-example v-show="false" :noteTitle="noteTwoTitle" :noteImage="noteTwoImage" :noteBody="noteTwoBody"/>
+    <props-data-flow-example/>
   </div>
 </template>
 
@@ -15,6 +16,7 @@ import ComputedProperties from './components/computedProperties.vue'
 import Watchers from './components/watchers.vue'
 import ComponentExample from './components/componentExample.vue'
 import PropsExample from './components/propsExample.vue'
+import PropsDataFlowExample from './components/propsDataFlowExample.vue'
 
 export default {
   name: 'App',
@@ -32,8 +34,8 @@ export default {
     ComputedProperties,
     Watchers,
     ComponentExample,
-    PropsExample
-
+    PropsExample,
+    PropsDataFlowExample
   }
 }
 </script>

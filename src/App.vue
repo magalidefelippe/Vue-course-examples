@@ -6,7 +6,7 @@
     <component-example v-show='false'/>
     <props-example v-show="false" :noteTitle="noteOneTitle" :noteImage="noteOneImage" :noteBody="noteOneBody"/>
     <props-example v-show="false" :noteTitle="noteTwoTitle" :noteImage="noteTwoImage" :noteBody="noteTwoBody"/>
-    <props-data-flow-example :counter="counter"/>
+    <props-data-flow-example :counter="counter" :userName="userName"/>
   </div>
 </template>
 
@@ -27,8 +27,8 @@ export default {
     noteTwoTitle: 'Argentina produce Sputnik V',
     noteTwoImage: 'https://www.eleconomista.com.mx/__export/1618942852522/sites/eleconomista/img/2021/04/20/vacuna_sputnik_v_reuters_rusia.jpg_1269359182.jpg',
     noteTwoBody: 'El primer lote podría entregarse a fines de junio',
-    counter: 0
-    
+    counter: 0,
+    userName: 'MARCELO'
   }),
   components: {
     Directives,

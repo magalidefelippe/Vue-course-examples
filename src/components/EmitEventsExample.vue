@@ -1,5 +1,5 @@
 <template>
- <!-- <div>
+  <!-- <div>
       <h3>{{user.name}}</h3>
       <h3>{{user.nickname}}</h3>
       <h3>Puntos: {{user.score}}</h3>
@@ -8,19 +8,25 @@
   ------------------------
   Example with parameters 
   -->
-    <div>
-      <h3>{{user.name}}</h3>
-      <h3>{{user.nickname}}</h3>
-      <h3>Puntos: {{user.score}}</h3>
-			<button @click="$emit('updateScore', 10)">Comprar 10 puntos</button>
-            <button @click="$emit('updateScore', 20)">Comprar 20 puntos</button>
-			<button @click="$emit('updateScore', 30)">Comprar 30 puntos</button>
-			<button @click="$emit('updateScore', 40)">Comprar 40 puntos</button>
+  <div>
+    <h3>{{ user.name }}</h3>
+    <h3>{{ user.nickname }}</h3>
+    <h3>Puntos: {{ user.score }}</h3>
+    <button
+        v-for="score in scores"
+        @click="$emit('updateScore', score)"
+        :key="score">
+        Comprar {{score}} puntos
+    </button>
   </div>
 </template>
 
 <script>
 export default {
-    props: ['user']
+  props: ["user"],
+
+  data: () => ({
+      scores: [10, 20, 30, 40]
+  })
 };
 </script>

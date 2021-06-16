@@ -6,7 +6,8 @@
     <component-example v-show='false'/>
     <props-example v-show="false" :noteTitle="noteOneTitle" :noteImage="noteOneImage" :noteBody="noteOneBody"/>
     <props-example v-show="false" :noteTitle="noteTwoTitle" :noteImage="noteTwoImage" :noteBody="noteTwoBody"/>
-    <props-data-flow-example :counter="counter" :userName="userName"/>
+    <props-data-flow-example v-show="false" :counter="counter" :userName="userName"/>
+    <emit-events-example @updateScore="incrementScore" :user="user"/>
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import Watchers from './components/watchers.vue'
 import ComponentExample from './components/componentExample.vue'
 import PropsExample from './components/propsExample.vue'
 import PropsDataFlowExample from './components/propsDataFlowExample.vue'
+import EmitEventsExample from './components/EmitEventsExample.vue';
 
 export default {
   name: 'App',
@@ -28,7 +30,12 @@ export default {
     noteTwoImage: 'https://www.eleconomista.com.mx/__export/1618942852522/sites/eleconomista/img/2021/04/20/vacuna_sputnik_v_reuters_rusia.jpg_1269359182.jpg',
     noteTwoBody: 'El primer lote podría entregarse a fines de junio',
     counter: 0,
-    userName: 'MARCELO'
+    userName: 'MARCELO',
+    user: {
+      name: 'Matias',
+      nickname: '@matikpo',
+      score: 20
+    }
   }),
   components: {
     Directives,
@@ -36,7 +43,14 @@ export default {
     Watchers,
     ComponentExample,
     PropsExample,
-    PropsDataFlowExample
+    PropsDataFlowExample,
+    EmitEventsExample
+  },
+
+  methods: {
+    incrementScore(){
+      this.user.score = this.user.score + 20
+    }
   }
 }
 </script>

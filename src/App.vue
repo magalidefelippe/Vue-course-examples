@@ -22,7 +22,13 @@
       :userName="userName"
     />
 
-    <emit-events-example @updateScore="incrementScore" :user="user" />
+    <emit-events-example  
+      @updateScore="incrementScore" 
+      :user="user" 
+      v-show="false"/>
+
+    <binding-clases-y-estilos
+    />
   </div>
 </template>
 
@@ -34,6 +40,8 @@ import ComponentExample from "./components/componentExample.vue";
 import PropsExample from "./components/propsExample.vue";
 import PropsDataFlowExample from "./components/propsDataFlowExample.vue";
 import EmitEventsExample from "./components/EmitEventsExample.vue";
+import BindingClasesYEstilos from "./components/bindingClasesYEstilos.vue";
+
 
 export default {
   name: "App",
@@ -74,6 +82,7 @@ export default {
     PropsExample,
     PropsDataFlowExample,
     EmitEventsExample,
+    BindingClasesYEstilos,
   },
 };
 </script>

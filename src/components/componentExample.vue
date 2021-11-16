@@ -7,7 +7,7 @@
 <script>
 export default {
     data: () => ({
-        message: 'Hola desde el componente'
+        message: 'Hola desde el component'
     }),
     
     methods: {

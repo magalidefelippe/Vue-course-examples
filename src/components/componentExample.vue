@@ -1,6 +1,6 @@
 <template>
   <div>
-      <button @click="showAlert">CAMBIOP!</button>
+      <button @click="showAlert">CAMBIO!</button>
   </div>
 </template>
 
